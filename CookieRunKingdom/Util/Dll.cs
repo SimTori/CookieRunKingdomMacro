@@ -16,6 +16,9 @@ namespace CookieRunKingdom
         [DllImport("user32.dll", SetLastError = true)]
         public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
+        [DllImport("user32")] 
+        public static extern IntPtr FindWindowEx(IntPtr hWnd1, int hWnd2, string lp1, string lp2);
+
         [DllImport("user32.dll", SetLastError = true)]
         public static extern bool GetWindowRect(IntPtr hwnd, out Rectangle lpRect);
 

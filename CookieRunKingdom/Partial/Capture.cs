@@ -20,15 +20,20 @@ namespace CookieRunKingdom
         public void capture()
         {
             Rectangle rc = Rectangle.Empty;
+
+            // 찾은 플레이어를 바탕으로 Graphics 정보를 가져온다.
             Graphics gfxWin = Graphics.FromHwnd(_hwnd);
+            // 찾은 플레이어 창 크기 및 위치를 가져온다. 
             rc = Rectangle.Round(gfxWin.VisibleClipBounds);
 
+            // 플레이어 창 크기 만큼의 비트맵을 선언한다.
             Bitmap bmp = new Bitmap(rc.Width, rc.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 
+            //
             Graphics gfxbmp = Graphics.FromImage(bmp);
             IntPtr hdcBitmap = gfxbmp.GetHdc();
 
-            bool succeeded = Dll.PrintWindow(_hwnd, hdcBitmap, 1);
+            bool succeeded = Dll.PrintWindow(_hwnd, hdcBitmap, 2);
             gfxbmp.ReleaseHdc(hdcBitmap);
             if (!succeeded)
             {
@@ -46,6 +51,7 @@ namespace CookieRunKingdom
                 gfxbmp.Clear(Color.Transparent);
             }
             gfxbmp.Dispose();
+            region.Dispose();
             //bmp.Save("C:\\Users\\cjh01\\Desktop\\text\\b.bmp");
             captureImage = new Image<Bgr, byte>(bmp);
 

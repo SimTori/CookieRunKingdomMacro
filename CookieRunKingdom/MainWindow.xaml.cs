@@ -56,6 +56,8 @@ namespace CookieRunKingdom
             string windowTitle = comboBox.SelectedValue.ToString();
 
             _hwnd = Dll.FindWindow(null, windowTitle);
+            // 녹스의 경우 아래까지 지금은 녹스만 사용
+            _hwnd = Dll.FindWindowEx(_hwnd, 0, "Qt5QWindowIcon", "ScreenBoardClassWindow");
 
             //Rectangle rect = Util.GetWindowRect(_hwnd);
             _winRect = Util.GetWindowRect(_hwnd);

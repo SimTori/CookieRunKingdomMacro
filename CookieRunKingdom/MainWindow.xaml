@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CookieRunKingdom"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="756" Width="1062" Loaded="Window_Loaded">
     <Grid>
         <ComboBox x:Name="cbProcessList" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="cbProcessList_SelectionChanged"/>
-        <Image x:Name="imgCapture" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="180" Width="240"/>
+        <Image x:Name="imgCapture" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="598" Width="800"/>
         <Button x:Name="btnCapture" Content="Capture" HorizontalAlignment="Left" Margin="313,10,0,0" VerticalAlignment="Top" Height="22" Click="btnCapture_Click"/>
 
     </Grid>
