@@ -79,6 +79,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Partial\Capture.cs" />
+    <Compile Include="Partial\Function.cs" />
     <Compile Include="Util\Dll.cs" />
     <Compile Include="Util\Util.cs" />
     <Page Include="MainWindow.xaml">

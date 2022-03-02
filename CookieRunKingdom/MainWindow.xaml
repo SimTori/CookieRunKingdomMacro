@@ -4,12 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CookieRunKingdom"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="756" Width="1062" Loaded="Window_Loaded">
+        mc:Ignorable="d" 
+        Title="쿠키런:킹덤 매크로" Height="756" Width="1062" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
-        <ComboBox x:Name="cbProcessList" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="cbProcessList_SelectionChanged"/>
-        <Image x:Name="imgCapture" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="598" Width="800"/>
-        <Button x:Name="btnCapture" Content="Capture" HorizontalAlignment="Left" Margin="313,10,0,0" VerticalAlignment="Top" Height="22" Click="btnCapture_Click"/>
+        <Image x:Name="imgCapture" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Height="600" Width="800"/>
+        <GroupBox x:Name="gbProcess" HorizontalAlignment="Left" Height="58" Header="앱 플레이어 선택" Margin="10,10,0,0" VerticalAlignment="Top" Width="504" FontWeight="Bold" BorderBrush="Black">
+            <Grid x:Name="gridAppPlayer">
+                <ComboBox x:Name="cbProcessList" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" SelectionChanged="cbProcessList_SelectionChanged" Height="30" SelectedIndex="0" FontWeight="Normal" FontSize="17">
+                    <!--<ComboBoxItem x:Name="sdf" Content="ComboBoxItem"/>-->
+                </ComboBox>
+                <Button x:Name="btnPrpcessRefresh" Content="새로고침" HorizontalAlignment="Right" Margin="405,0,0,0" VerticalAlignment="Center" Height="30" Width="86" FontWeight="Normal" Click="btnPrpcessRefresh_Click"/>
+            </Grid>
+        </GroupBox>
+        <StatusBar Margin="0,720,0,0"/>
+        <Button x:Name="btnCapture" Content="Capture" HorizontalAlignment="Left" Margin="519,10,0,0" VerticalAlignment="Top" Height="58" Click="btnCapture_Click" Width="72"/>
 
     </Grid>
 </Window>
